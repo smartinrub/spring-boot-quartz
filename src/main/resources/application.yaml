@@ -1,0 +1,19 @@
+### Datasource configuration
+spring:
+  datasource:
+    username: root
+    password:
+    url: jdbc:mysql://localhost:3306/quartz_example
+
+### Quartz configuration
+  quartz:
+    job-store-type: jdbc
+    jdbc:
+      initialize-schema:
+    properties:
+      org:
+        quartz:
+          jobStore:
+            isClustered: true
+          scheduler:
+            instanceId: AUTO # instance ID is generated for you
